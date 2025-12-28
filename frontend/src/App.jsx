@@ -1,21 +1,18 @@
-import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Otp from "./pages/Otp";
+
 
 function App() {
-  const [msg, setMsg] = useState("");
-
-  useEffect(() => {
-    fetch("http://localhost:5000/ping")
-      .then(res => res.json())
-      .then(data => setMsg(data.message))
-      .catch(err => console.error(err));
-  }, []);
-
   return (
-    <div style={{ padding: "20px" }}>
-      <h2>Craveio Frontend</h2>
-      <p>{msg}</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/otp" element={<Otp />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
