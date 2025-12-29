@@ -14,7 +14,18 @@ import Orders from "./pages/hotel/Orders";
 import OrderDetails from "./pages/hotel/OrderDetails";
 import Dashboard from "./pages/hotel/Dashboard";
 import Settings from "./pages/hotel/Settings";
-import Menu from "./pages/hotel/Menu";  
+import Menu from "./pages/hotel/Menu"; 
+import Scan from "./pages/delivery/Scan";
+import ScanSuccess from "./pages/delivery/ScanSuccess";
+import ScanFailed from "./pages/delivery/ScanFailed";
+import AdminLogin from "./pages/admin/AdminLogin";
+import AdminDashboard from "./pages/admin/Dashboard";
+import AdminStudents from "./pages/admin/Students";
+import AdminHotels from "./pages/admin/Hotels";
+import AddHotel from "./pages/admin/AddHotel";
+import AdminOrders from "./pages/admin/Orders";
+import AdminOrderDetails from "./pages/admin/OrderDetails";
+
 
 
 function App() {
@@ -37,7 +48,19 @@ function App() {
         <Route path="/hotel/orders/:id" element={<OrderDetails />} />
         <Route path="/hotel/settings" element={<Settings />} />
         <Route path="/hotel/menu" element={<Menu />} />
-        
+        <Route path="/delivery/scan" element={<Scan />} />
+        <Route path="/delivery/success" element={<ScanSuccess />} />
+        <Route path="/delivery/failed" element={<ScanFailed />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/students" element={<AdminStudents />} />
+        <Route path="/admin/hotels" element={<AdminHotels />} />
+        <Route path="/admin/hotels/add" element={<AddHotel />} />
+        <Route path="/admin/orders" element={<AdminOrders />} />
+        <Route path="/admin/orders/:id" element={<AdminOrderDetails />} />
+
+
+
       </Routes>
     </BrowserRouter>
   );
