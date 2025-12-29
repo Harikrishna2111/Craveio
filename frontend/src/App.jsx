@@ -10,6 +10,11 @@ import OrderStatus from "./pages/student/OrderStatus";
 import QrPickup from "./pages/student/QrPickup";
 import OrderCompleted from "./pages/student/OrderCompleted";
 import NotFound from "./pages/common/NotFound";
+import Orders from "./pages/hotel/Orders";
+import OrderDetails from "./pages/hotel/OrderDetails";
+import Dashboard from "./pages/hotel/Dashboard";
+import Settings from "./pages/hotel/Settings";
+import Menu from "./pages/hotel/Menu";  
 
 
 function App() {
@@ -27,6 +32,11 @@ function App() {
         <Route path="/order/:id/qr" element={<QrPickup />} />
         <Route path="/order/:id/completed" element={<OrderCompleted />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/hotel/dashboard" element={<Dashboard />} />
+        <Route path="/hotel/orders" element={<Orders />} />
+        <Route path="/hotel/orders/:id" element={<OrderDetails />} />
+        <Route path="/hotel/settings" element={<Settings />} />
+        <Route path="/hotel/menu" element={<Menu />} />
         
       </Routes>
     </BrowserRouter>
